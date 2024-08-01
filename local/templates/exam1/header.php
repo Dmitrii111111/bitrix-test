@@ -200,13 +200,22 @@ if ($iHours >= 9 && $iHours <= 18) {
 
         <? if (!$blsMain): ?>  <!-- если главная то не показываем хлебные крошки -->
         <!-- breadcrumbs(хлебные крошки) -->
-        <div class="breadcrumbs-box">
+        <!-- <div class="breadcrumbs-box">
             <div class="inner-wrap">
                 <a href="">Главная</a>
                 <a href="">Мебель</a>
                 <span>Выставки и события</span>
             </div>
-        </div>
+        </div> -->
+
+        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "nav", Array(
+	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+		"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+	),
+	false
+);?>
+
         <!-- /breadcrumbs -->
         <? endif; ?>
 
