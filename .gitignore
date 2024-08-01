@@ -1,6 +1,16 @@
 ### общие исключения
 # IDE
+/ssh
+.ssh
+/.ssh
+.cache
+/.cache
 .idea/
+.vscode-server
+/.vscode-server
+.bash_histori
+/.bash_histori
+/bash_histori
 # VSCode Settings
 /.vscode
 
