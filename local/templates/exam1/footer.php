@@ -113,7 +113,35 @@ Loc::loadMessages(__FILE__);
         <div class="inner-wrap">
             <nav class="main-menu">
                 <div class="item">
-                    <div class="title-block">О магазине</div>
+
+                    <!-- нижние меню (BOTTOM) -->
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"botton", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "bottom",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "bottom",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "botton"
+	),
+	false
+);?>
+
+                </div>
+
+                
+
+                <!-- нижние меню (BOTTOM) -->
+   
+                    <!-- <div class="title-block">О магазине</div>
                     <ul>
                         <li><a href="">Отзывы</a>
                         </li>
@@ -121,8 +149,9 @@ Loc::loadMessages(__FILE__);
                         </li>
                         <li><a href="">История</a>
                         </li>
-                    </ul>
-                </div>
+                    </ul> -->
+
+
                 <div class="item">
                     <div class="title-block">Каталог товаров</div>
                     <ul>
@@ -140,8 +169,8 @@ Loc::loadMessages(__FILE__);
                         </li>
                         <li><a href="">Кровати и кушетки</a>
                         </li>
-                        <li><a href="">Тумобчки и прихожие</a>
                         </li>
+                        <li><a href="">Тумобчки и прихожие</a>
                         <li><a href="">Аксессуары</a>
                         </li>
                         <li><a href="">Каталоги мебели</a>

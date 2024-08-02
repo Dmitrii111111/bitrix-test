@@ -8,9 +8,7 @@
 .idea/
 .vscode-server
 /.vscode-server
-.bash_histori
-/.bash_histori
-/bash_histori
+.bash_history
 # VSCode Settings
 /.vscode
 
