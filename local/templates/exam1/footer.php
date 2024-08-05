@@ -35,14 +35,28 @@ Loc::loadMessages(__FILE__);
                 <? endif ?>
 
                     <!-- side anonse -->
-                    <div class="side-block side-anonse">
-                        <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
-                        <div class="item">
-                            <p>Клиенты предпочитают все больше эко-материалов.</p>
-                        </div>
-                    </div>
+                    <!-- вкл обл Полезная информация с лево -->
+                        <?$APPLICATION->IncludeComponent("bitrix:main.include", "on-oblost", array(
+	"AREA_FILE_RECURSIVE" => "Y",
+		"AREA_FILE_SHOW" => "sect",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
+
+                    <!-- <div class="side-block side-anonse">
+                        <<div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
+                            <div class="item">
+                                <p>Клиенты предпочитают все больше эко-материалов.</p>
+                            </div>
+                    </div> -->
                     <!-- /side anonse -->
                     <!-- side wrap -->
+
                     <div class="side-wrap">
                         <div class="item-wrap">
                             <!-- side action -->
@@ -182,8 +196,22 @@ Loc::loadMessages(__FILE__);
                 <div class="title-block"><?=GetMessage("FOOTER_CONTACTS_INFORMATION"); ?></div>
                 <div class="loc-block">
                     <div class="address">ул. Летняя, стр.12, офис 512</div>
-                    <div class="phone"><a href="tel:84952128506">8 (495) 212-85-06</a>
-                    </div>
+                    
+                    <!-- вкл обл для телефона -->
+                    <div class="phone">
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            ".default",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/phone.php"
+                            )
+                        );?>
+                    </div>    
+
                 </div>
                 <div class="main-soc-block">
                     <a href="" class="soc-item">

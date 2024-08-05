@@ -20,6 +20,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"[ex1 10] Шаблоны для контента статичной страницы", 
+		"/ex1-10-shablony-dlya-kontenta-statichnoy-stranitsy.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
