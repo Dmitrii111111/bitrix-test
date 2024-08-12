@@ -387,4 +387,3 @@ if ($iHours >= 9 && $iHours <= 18) {
 		                <!-- /afisha box -->
                     <? endif; ?>
 
-

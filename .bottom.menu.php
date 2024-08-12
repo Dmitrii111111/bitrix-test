@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Отзывы", 
-		"contacts/", 
+		"rew/", 
 		Array(), 
 		Array(), 
 		"" 
