@@ -34,6 +34,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array("TXT"=>"это текст для пункта \"Партнерам\""), 
 		"" 
+	),
+	Array(
+		"Поиск", 
+		"/search/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
