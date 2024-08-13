@@ -96,7 +96,7 @@ Loc::loadMessages(__FILE__);
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "#ELEMENT_CODE#/",
+		"DETAIL_URL" => "#SITE_DIR#/rew/#ELEMENT_CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "N",
 		"DISPLAY_NAME" => "N",
