@@ -147,6 +147,7 @@ Loc::loadMessages(__FILE__);
 	false
 );?>
 
+
 		                    <!-- <div class="rew-footer-carousel">
 								<div class="item">
 									<div class="side-block side-opin">
@@ -189,6 +190,26 @@ Loc::loadMessages(__FILE__);
             <!-- /content box -->
         </div>
         <!-- /page -->
+
+<!-- поиск номеров по дате  -->
+<div id="search-widget"></div>
+	<script>
+		widgetOptions = { token: "e2b7a588-abd2-424f-b5b6-dfdefdd4be1f", target: "search-widget", widget_width: "800", splitDates: false, align: "left", showGuestsCount: false, maxAdults: "10", defAdults: "1", showChildren: false, maxChildren: "10", minAge: "0", maxAge: "17", usePaygate: true, showHours: true, askHours: false, alwaysShowTariff: false, expanded: false, emailRequired: false, noResize: false, periodText: "Выберите даты", method: "popup", language: "ru",  };
+		(function() {
+
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.async = true;
+
+			script.src = 'https://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
+		})();
+	</script>
+
+
+<script src="https://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js" type="text/javascript"></script> 
+<!-- поиск номеров по дате  -->
+
         <div class="empty"></div>
     </div>
     <!-- /wrap -->

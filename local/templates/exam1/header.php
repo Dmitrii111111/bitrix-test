@@ -85,7 +85,27 @@ if ($iHours >= 9 && $iHours <= 18) {
                         <input type="text" placeholder="Поиск">
                         <button type="submit"></button>
                     </form>
-                    <nav class="menu-block">
+
+
+
+                    <!-- вход/выход -->
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	"demo", 
+	array(
+		"FORGOT_PASSWORD_URL" => "/login/?forgot_password=yes",
+		"PROFILE_URL" => "/login/user.php",
+		"REGISTER_URL" => "/login/?register=yes",
+		"SHOW_ERRORS" => "Y",
+		"COMPONENT_TEMPLATE" => "demo"
+	),
+	false
+);?>
+
+
+
+
+                    <!-- <nav class="menu-block">
                         <ul>
                             <li class="att popup-wrap">
                                 <a id="hd_singin_but_open" href="" class="btn-toggle">Войти на сайт</a>
@@ -107,7 +127,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                             <li><a href="">Зарегистрироваться</a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
                 </div>
             </div>
         </header>
