@@ -25,7 +25,13 @@ $this->setFrameMode(true);
 			<?
 			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-			?>
+			
+			// Этот код получает информацию о превью-изображении из CMS Bitrix, создает его ресайзнутую версию (49x49 пикселей, пропорционально) 
+			// и сохраняет URL этого ресайзнутого изображения в переменную `$img`
+			$arImg = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE']['ID'], array('width' => 68, 'height' => 50), BX_RESIZE_IMAGE_PROPORTIONAL, true); 
+			$img = $arImg['src'];
+		    ?>
+
 				<div class="review-block" id="<?=$this->GetEditAreaId($arItem['ID']);?>">   <!-- GetEditAreaId($arItem['ID']) - для эрмитажа для каждого	 -->
 					<div class="review-text">
 						
@@ -36,7 +42,7 @@ $this->setFrameMode(true);
 							<?=$arItem["PREVIEW_TEXT"]?>
 						</div>
 					</div>
-					<div class="review-img-wrap"><a href=""><img src=<?=$arItem["PREVIEW_PICTURE"]["SRC"] ? $arItem["PREVIEW_PICTURE"]["SRC"] : '/local/templates/exam1/img/rew/no_photo.jpg'?> alt="img"></a></div>
+					<div class="review-img-wrap"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img src=<?=$img ? $img : '/local/templates/exam1/img/rew/no_photo.jpg'?> alt="img"></a></div>
 				</div>
 
 

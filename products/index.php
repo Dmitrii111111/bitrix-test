@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("Продукция");
 		"ACTION_VARIABLE" => "action",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SEF_MODE" => "Y",
+		"SEF_MODE" => "N",
 		"SEF_FOLDER" => "/products/",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_SHADOW" => "Y",
@@ -156,17 +156,9 @@ $APPLICATION->SetTitle("Продукция");
 		"COMPATIBLE_MODE" => "N",
 		"USE_ELEMENT_COUNTER" => "Y",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
-		"SEF_URL_TEMPLATES" => array(
-			"sections" => "",
-			"section" => "#SECTION_CODE_PATH#",
-			"element" => "#SECTION_CODE_PATH#/#ELEMENT_ID#/",
-			"compare" => "compare.php?action=#ACTION_CODE#",
-			"smart_filter" => "#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",
-		),
 		"VARIABLE_ALIASES" => array(
-			"compare" => array(
-				"ACTION_CODE" => "action",
-			),
+			"ELEMENT_ID" => "ELEMENT_ID",
+			"SECTION_ID" => "SECTION_ID",
 		)
 	),
 	false
