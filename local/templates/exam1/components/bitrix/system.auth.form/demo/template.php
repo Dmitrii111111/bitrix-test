@@ -119,7 +119,7 @@ else {
 $rsUser = CUser::GetByID($USER->GetID());
 $rsUser = $rsUser->Fetch();
 // echo "<pre>"; print_r($rsUser); echo "</pre>";
- echo '<pre>'; var_dump($arParams); echo '</pre>';
+// echo '<pre>'; var_dump($arParams); echo '</pre>';
     ?>
         <nav class="menu-block">
             <ul>
@@ -136,6 +136,5 @@ $rsUser = $rsUser->Fetch();
 }
 
 ?>
-<?// echo '<pre>'; var_dump($arResult); echo '</pre>'; ?>
 
 
